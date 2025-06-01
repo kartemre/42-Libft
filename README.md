@@ -1,2 +1,2 @@
 # 42-Libft
-LİBFT
+LIBFT
