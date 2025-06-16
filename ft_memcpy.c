@@ -30,3 +30,21 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/*
+int main()
+{
+	char str[20] = "abcdef123456";
+	char *dest;
+	char *src;
+
+	dest = str + 4;		//abcdabcd
+	src = str;			//abcdabcdabcd
+						//abcdabcd		
+	// src ve dest aynı dizi içinde, çakışma var
+	// ft_memmove(dest, src, 8);
+	ft_memcpy(dest, src, 8); //abcdef12
+	printf("Sonuç: %s\n", src); // Beklenen: "ababcd123456"
+
+	return 0;
+}
+*/

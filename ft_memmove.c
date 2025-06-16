@@ -15,15 +15,15 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*d;
-	const unsigned char	*s;
+	unsigned char	*s;
 
 	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
+	s = (unsigned char *)src;
 	if (d == NULL && s == NULL)
 		return (NULL);
-	else if (d < s) //ileri yönde kopyalam
+	else if (d < s)
 		ft_memcpy(d, s, n);
-	else // geri yönde kopyalama çakışmayı önlemek için
+	else
 	{
 		while (n > 0)
 		{
@@ -33,15 +33,22 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
+
 int main()
 {
 	char str[20] = "abcdef123456";
+	char *dest;
+	char *src;
+
+	dest = str + 4;		//ef123456
+	src = str;			//abcdef123456
+
+
 
 	// src ve dest aynı dizi içinde, çakışma var
-	ft_memmove(str + 2, str, 6);
-	printf("Sonuç: %s\n", str); // Beklenen: "ababcd123456"
+	// ft_memmove(dest, src, 8);
+	ft_memmove(dest, src, 8); //abcdef12
+	printf("Sonuç: %s\n", dest); // Beklenen: "ababcd123456"
 
 	return 0;
 }
-*/
