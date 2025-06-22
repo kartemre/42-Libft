@@ -48,8 +48,8 @@ static void	ft_free(char **dest, size_t i)
 {
 	while (i > 0)
 	{
-		free(dest[i]);
 		i--;
+		free(dest[i]);
 	}
 	free(dest);
 }
