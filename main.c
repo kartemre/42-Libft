@@ -1,25 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h> // INT_MAX, INT_MIN
+
 #include "libft.h"
+
+char upperfirst(unsigned int index, char c)
+{
+	if (index == 0)
+		return (ft_toupper(c));
+	return (ft_tolower(c));
+}
 
 int	main(void)
 {
-	int		values[] = {0, 1, -1, 42, -42, INT_MAX, INT_MIN};
-	int		i = 0;
-	char	*str;
-
-	while (i < (int)(sizeof(values) / sizeof(values[0])))
+	char *s = "emre kart okula gitti";
+	char *res = ft_strmapi(s, upperfirst);
+	if (res)
 	{
-		str = ft_itoa(values[i]);
-		if (!str)
-			printf("ft_itoa(%d) → malloc failed\n", values[i]);
-		else
-		{
-			printf("ft_itoa(%d) → \"%s\"\n", values[i], str);
-			free(str);
-		}
-		i++;
+		printf("orjinal: %s\n", s);
+		printf("yeni: %s\n", res);
+		free(res);
 	}
 	return (0);
 }
