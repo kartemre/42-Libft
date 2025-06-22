@@ -12,8 +12,8 @@
 
 #include "libft.h"
 
- void	ft_putnbr_fd(int n, int fd)
- {
+void	ft_putnbr_fd(int n, int fd)
+{
 	long	nb;
 	char	c;
 
@@ -23,14 +23,14 @@
 		write(fd, "-", 1);
 		nb *= -1;
 	}
-	if (n < 10)
+	if (nb < 10)
 	{
-		c = '0' + n;
+		c = '0' + nb;
 		write(fd, &c, 1);
 	}
 	else
 	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putnbr_fd(nb % 10, fd);
 	}
- }
+}

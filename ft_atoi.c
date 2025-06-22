@@ -23,7 +23,7 @@ int	ft_atoi(const char *nptr)
 	nbr = 0;
 	while (nptr[i] == '\v' || nptr[i] == '\f'
 		|| nptr[i] == '\r' || nptr[i] == '\t'
-		|| nptr[i] == '\n' || nptr[i] == '\0')
+		|| nptr[i] == '\n' || nptr[i] == ' ')
 		i++;
 	if (nptr[i] != '\0' && (nptr[i] == '-' || nptr[i] == '+'))
 	{
@@ -31,15 +31,8 @@ int	ft_atoi(const char *nptr)
 			sign = -1;
 		i++;
 	}
-	while (nptr[i] != '\0' && ft_isdigit(nptr[i] - '0'))
+	while (nptr[i] != '\0' && ft_isdigit(nptr[i]))
 		nbr = ((nbr * 10) + (nptr[i++] - '0'));
 	nbr = sign * nbr;
 	return (nbr);
 }
-/*
-int main ()
-{
-	printf("%d\n", ft_atoi("+6546"));
-	printf("%d\n", atoi("--756"));
-}
-*/

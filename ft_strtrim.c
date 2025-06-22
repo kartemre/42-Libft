@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int ft_control(char c, char const *set)
+static int	ft_control(char c, char const *set)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ static int ft_control(char c, char const *set)
 	return (0);
 }
 
-static char *ft_newstr(char const *s1, char const *set)
+static char	*ft_newstr(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	s_len;
@@ -59,7 +59,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*res;
 
 	if (!s1 || !set)
-		return(NULL);
+		return (NULL);
 	res = ft_newstr(s1, set);
 	return (res);
 }
