@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekart <ekartk@student.42istanbul.com.      +#+  +:+       +#+        */
+/*   By: ekart <ekart@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/22 16:45:56 by ekart             #+#    #+#             */
-/*   Updated: 2025/06/22 16:46:39 by ekart            ###   ########.fr       */
+/*   Updated: 2025/06/25 14:37:52 by ekart            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h> //sileceğim
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

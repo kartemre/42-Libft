@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekart <ekartk@student.42istanbul.com.      +#+  +:+       +#+        */
+/*   By: ekart <ekart@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 19:25:18 by ekart             #+#    #+#             */
-/*   Updated: 2025/06/15 19:25:20 by ekart            ###   ########.fr       */
+/*   Updated: 2025/06/25 14:35:51 by ekart            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-int main()
-{
-	char str[20] = "abcdef123456";
-	char *dest;
-	char *src;
-
-	dest = str + 4;		//ef123456
-	src = str;			//abcdef123456
-
-
-
-	// src ve dest aynı dizi içinde, çakışma var
-	// ft_memmove(dest, src, 8);
-	ft_memmove(dest, src, 8); //abcdef12
-	printf("Sonuç: %s\n", dest); // Beklenen: "ababcd123456"
-
-	return 0;
-}
-*/
